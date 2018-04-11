@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Grid Example Two</title>
+  <style>
+    body {
+      background: grey;
+    }
+      .wrapper {
+        display: grid;
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-columns:repeat(3, 1fr);
+        grid-gap: .5em;
+        /* grid-auto-rows: 100px; */
+        grid-auto-rows: minmax(100px, auto); /* auto stretches  hieght content panel */
+      }
+      .nested {
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-gap: .5em;
+      }
+      .nested > div {
+        border: #333 1px solid;
+        padding: .2em;
+      }
+      .wrapper > div {
+        background: #eee;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(odd) {
+        background: #ddd;
+      }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+    <div>
+      Lorem ipsum dolor site.
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor site. Lorem ipsum dolor site. Lorem ipsum dolor site. Lorem ipsum dolor site.
+        Lorem ipsum dolor site. Lorem ipsum dolor site.
+        Lorem ipsum dolor site. Lorem ipsum dolor site.
+      </p>
+      <p>
+        Lorem ipsum dolor site. Lorem ipsum dolor site. Lorem ipsum dolor site. Lorem ipsum dolor site.
+        Lorem ipsum dolor site. Lorem ipsum dolor site.
+        Lorem ipsum dolor site. Lorem ipsum dolor site.
+      </p>
+    </div>
+    <div>
+      Lorem ipsum dolor site.
+    </div>
+    <div>
+      Lorem ipsum dolor site.
+    </div>
+    <div class="nested">
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+      <div>
+        Lorem ipsum dolor site HI.
+      </div>
+    </div>
+    <div>
+      Lorem ipsum dolor site.
+    </div>
+    <div>
+      Lorem ipsum dolor site.
+    </div>
+    <div>
+      Lorem ipsum dolor site.
+    </div>
+</div>
+
+</body>
+</html>
